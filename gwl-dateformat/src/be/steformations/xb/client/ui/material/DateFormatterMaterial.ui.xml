@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" 
+			xmlns:m="urn:import:gwt.material.design.client.ui">
+	 
+	<m:MaterialRow margin="20"> <!-- <div> -->
+		<m:MaterialColumn grid="s6" offset="s3"> <!-- <span> grid => largeur(1 à 12) -->
+			<m:MaterialRow> <!-- inputs -->
+				<m:MaterialColumn grid="s3"> <!-- jours -->
+					<m:MaterialListBox placeholder="jour" ui:field="dayInput" />
+				</m:MaterialColumn>
+				<m:MaterialColumn grid="s3"> <!-- mois -->
+					<m:MaterialListBox placeholder="mois" ui:field="monthInput" />
+				
+				</m:MaterialColumn>
+				<m:MaterialColumn grid="s3"> <!-- annee -->
+					<m:MaterialIntegerBox label="année" ui:field="yearInput" />
+				
+				</m:MaterialColumn>
+				<m:MaterialColumn grid="s3"> <!-- locale -->
+<!-- 					<m:MaterialTextBox ui:field="localeInput"/> -->
+					<m:MaterialListBox placeholder="locale" ui:field="localeInput"/>
+				</m:MaterialColumn>
+			</m:MaterialRow>
+			
+			<m:MaterialRow> <!-- bouton et resultat -->
+				<m:MaterialColumn grid="s2">
+					<m:MaterialButton text="formater" ui:field="formatEventSource"/>
+				</m:MaterialColumn>
+				<m:MaterialColumn grid="s8" offset="s4">
+					<m:MaterialLabel fontSize="1.5em" ui:field="output"/> <!-- <span> -->
+				</m:MaterialColumn>
+			</m:MaterialRow>
+			
+		</m:MaterialColumn>
+	</m:MaterialRow>
+	
+</ui:UiBinder> 
